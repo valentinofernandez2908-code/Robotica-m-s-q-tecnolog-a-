@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robótica Educativa: Innovación, Ciencia y Futuro | Sitio Oficial - Valentino Fernández</title>
+    <style>
+        /* ==========================================
+           ESTILOS GENERALES Y PALETA DE ALTO CONTRASTE
+           ========================================== */
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #1e3a8a;
+            --accent-color: #0284c7;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --border-color: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.9;
+        }
+
+        /* ==========================================
+           ENCABEZADO PRINCIPAL (HERO SECTION)
+           ========================================== */
+        header {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 6px solid var(--accent-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.2rem;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        header p {
+            font-size: 1.4rem;
+            margin-top: 15px;
+            color: #e2e8f0;
+            font-weight: 400;
+        }
+
+        .author-badge {
+            display: inline-block;
+            margin-top: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            font-weight: 600;
+        }
+
+        /* ==========================================
+           CONTENEDOR PRINCIPAL Y TARJETAS
+           ========================================== */
+        .container {
+            max-width: 1050px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            margin-bottom: 45px;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--border-color);
+            padding-bottom: 12px;
+            margin-top: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-main);
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        /* ==========================================
+           ESTILOS PARA LAS IMÁGENES INCLUIDAS
+           ========================================== */
+        .img-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .img-caption {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* ==========================================
+           LISTAS Y BLOQUES DESTACADOS
+           ========================================== */
+        ul {
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 18px;
+            color: var(--text-main);
+            font-size: 1.12rem;
+        }
+
+        li strong {
+            color: var(--secondary-color);
+        }
+
+        .highlight-box {
+            background-color: #e0f2fe;
+            border: 1px solid #bae6fd;
+            padding: 30px;
+            border-left: 6px solid #0284c7;
+            border-radius: 8px;
+            margin: 35px 0;
+            color: #0369a1;
+        }
+
+        .highlight-box strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #0f172a;
+        }
+
+        .highlight-box p {
+            color: #0369a1;
+            margin-bottom: 0;
+        }
+
+        /* ==========================================
+           ESTILOS PARA LAS ACTIVIDADES INTERACTIVAS
+           ========================================== */
+        .quiz-card {
+            background: #f1f5f9;
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .quiz-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .options-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .option-btn {
+            background-color: #ffffff;
+            border: 2px solid var(--border-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: left;
+            font-size: 1.05rem;
+            cursor: pointer;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .option-btn:hover {
+            border-color: var(--secondary-color);
+            background-color: #e2e8f0;
+        }
+
+        .option-btn.correct {
+            background-color: #d1fae5 !important;
+            border-color: #10b981 !important;
+            color: #065f46 !important;
+            font-weight: bold;
+        }
+
+        .option-btn.incorrect {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            color: #991b1b !important;
+        }
+
+        .feedback-msg {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.05rem;
+            min-height: 28px;
+        }
+
+        /* ==========================================
+           PIE DE PÁGINA (FOOTER)
+           ========================================== */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #0f172a;
+            color: #ffffff;
+            font-size: 1.05rem;
+            margin-top: 80px;
+            border-top: 5px solid var(--accent-color);
+        }
+
+        footer p {
+            color: #cbd5e1;
+            margin: 12px 0;
+            font-size: 1.05rem;
+        }
+
+        footer strong {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA DEL SITIO -->
+    <header>
+        <h1>Robótica Educativa: Innovación que Transforma</h1>
+        <p>Explorando el fascinante universo de la tecnología, la lógica y la programación aplicada</p>
+        <div class="author-badge">Estudiante: Valentino Fernández (2.º Año)</div>
+    </header>
+
+    <!-- CUERPO DE CONTENIDOS AMPLIADOS Y DISTRIBUIDOS -->
+    <div class="container">
+        
+        <!-- SECCIÓN 1: INTRODUCCIÓN -->
+        <section>
+            <h2>¿Qué es la Robótica Educativa?</h2>
+            <p>La robótica educativa representa un enfoque pedagógico innovador e interdisciplinario que fusiona de manera directa disciplinas fundamentales como la ciencia, la tecnología, la ingeniería y las matemáticas (conocidas globalmente bajo el acrónimo STEM).</p>
+            <p>A través de este espacio, los estudiantes logran comprender y aplicar conceptos abstractos convirtiéndolos en soluciones prácticas, estimulando profundamente el razonamiento lógico, la creatividad y el pensamiento computacional crítico.</p>
+            
+            <!-- IMAGEN 1 RELACIONADA -->
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robótica y Tecnología Educativa">
+                <div class="img-caption">Figura 1: Sistema tecnológico y robótico aplicado al aprendizaje moderno.</div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Propósito fundamental del proyecto:</strong>
+                <p>Estimular la inventiva técnica, potenciar el trabajo colaborativo, afianzar la lógica de programación y resolver problemáticas cotidianas mediante la interacción directa con sistemas automatizados y entornos digitales.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: ACTIVIDADES Y DESARROLLO -->
+        <section>
+            <h2>Actividades y Prácticas del Ciclo Lectivo</h2>
+            <p>Durante el transcurso de este año escolar, hemos llevado adelante diversas experiencias teóricas y prácticas orientadas a dominar los pilares fundamentales de la automatización moderna y el hardware:</p>
+            
+            <ul>
+                <li><strong>Fundamentos de lógica y compuertas lógicas:</strong> Estudio detallado de circuitos combinacionales, análisis exhaustivo de tablas de verdad y su aplicación directa en el control de sistemas físicos y lógicos automatizados.</li>
+                <li><strong>Arquitectura y componentes de hardware:</strong> Reconocimiento avanzado de sensores, actuadores, placas de control, unidades de procesamiento y el flujo de energía eléctrica dentro de un esquema robótico funcional.</li>
+                <li><strong>Programación y estructuras de control:</strong> Creación de algoritmos estructurados orientados a la toma de decisiones autónomas, utilizando condiciones lógicas, bucles de repetición y variables en entornos simulados y reales.</li>
+                <li><strong>Diseño y desarrollo web institucional:</strong> Maquetación, estructuración y estilización mediante lenguajes modernos (HTML5 y CSS3) para la exposición pública y profesional de los trabajos escolares realizados.</li>
+            </ul>
+
+            <!-- IMAGEN 2 RELACIONADA -->
+            <div class="img-container">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Circuitos y Componentes de Hardware">
+                <div class="img-caption">Figura 2: Circuitos lógicos y componentes de hardware electrónico.</div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: ACTIVIDADES INTERACTIVAS PARA EVALUACIÓN -->
+        <section>
+            <h2>Evaluación Interactiva de Saberes</h2>
+            <p>Ponemos a prueba los conocimientos teóricos adquiridos en la materia mediante un cuestionario interactivo de opción múltiple diseñado especialmente para el seguimiento pedagógico y la comprobación de conceptos.</p>
+
+            <!-- PREGUNTA 1 -->
+            <div class="quiz-card">
+                <h3>Pregunta 1: ¿Qué significado tiene el acrónimo STEM en la educación tecnológica?</h3>
+                <div class="options-group">
+                    <button class="option-btn" onclick="checkAnswer(this, false, '1')">A) Sistemas, Tecnologías, Electricidad y Mecánica</button>
+                    <button class="option-btn" onclick="checkAnswer(this, true, '1')">B) Ciencia, Tecnología, Ingeniería y Matemáticas</button>
+                    <button class="option-btn" onclick="checkAnswer(this, false, '1')">C) Software, Transmisión, Estructuras y Monitoreo</button>
+                </div>
+                <div id="feedback-1" class="feedback-msg"></div>
+            </div>
+
+            <!-- PREGUNTA 2 -->
+            <div class="quiz-card">
+                <h3>Pregunta 2: ¿Cuál es la función principal de las compuertas lógicas en un sistema automatizado?</h3>
+                <div class="options-group">
+                    <button class="option-btn" onclick="checkAnswer(this, false, '2')">A) Aumentar la velocidad del procesador de manera física</button>
+                    <button class="option-btn" onclick="checkAnswer(this, false, '2')">B) Suministrar energía eléctrica de alto voltaje al circuito</button>
+                    <button class="option-btn" onclick="checkAnswer(this, true, '2')">C) Evaluar condiciones y procesar decisiones basadas en lógica booleana</button>
+                </div>
+                <div id="feedback-2" class="feedback-msg"></div>
+            </div>
+
+            <!-- PREGUNTA 3 -->
+            <div class="quiz-card">
+                <h3>Pregunta 3: ¿Qué lenguaje de marcado se utilizó para estructurar el contenido de esta página web?</h3>
+                <div class="options-group">
+                    <button class="option-btn" onclick="checkAnswer(this, true, '3')">A) HTML (HyperText Markup Language)</button>
+                    <button class="option-btn" onclick="checkAnswer(this, false, '3')">B) Python (Lenguaje de programación de propósito general)</button>
+                    <button class="option-btn" onclick="checkAnswer(this, false, '3')">C) SQL (Structured Query Language para bases de datos)</button>
+                </div>
+                <div id="feedback-3" class="feedback-msg"></div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: METODOLOGÍA Y FUENTES DE CONSULTA -->
+        <section>
+            <h2>Metodología de Trabajo y Fuentes de Consulta</h2>
+            <p>El desarrollo exitoso de este proyecto requirió la implementación de metodologías iterativas de trabajo, dividiendo los grandes problemas en partes más pequeñas, lógicas y fáciles de resolver de manera ordenada.</p>
+            <p>Para respaldar la investigación teórica y el desarrollo técnico, se consultaron las siguientes fuentes oficiales y bibliografía de la materia:</p>
+            <ul>
+                <li><strong>Fuente 1:</strong> Apuntes teóricos institucionales de Robótica Educativa y Guía de Compuertas Lógicas (Ciclo Lectivo 2026).</li>
+                <li><strong>Fuente 2:</strong> Documentación técnica de desarrollo web educativo y estándares de accesibilidad HTML5 / CSS3.</li>
+            </ul>
+        </section>
+
+        <!-- SECCIÓN 5: REFLEXIÓN Y FUTURO -->
+        <section>
+            <h2>Impacto, Innovación y Perspectivas Futuras</h2>
+            <p>La integración acelerada de la inteligencia artificial, la robótica y la automatización industrial está rediseñando por completo el entorno social, educativo y laboral en el que vivimos actualmente.</p>
+            <p>Adquirir competencias tecnológicas desde la educación secundaria deja de ser una simple opción para convertirse en una herramienta indispensable de inserción, preparándonos para los desafíos del mañana.</p>
+            <p>El dominio de estas tecnologías nos capacita para dejar de ser meros espectadores o consumidores pasivos de productos digitales, transformándonos en los verdaderos creadores, diseñadores y arquitectos de las soluciones tecnológicas del futuro.</p>
+        </section>
+
+    </div>
+
+    <!-- PIE DE PÁGINA INSTITUCIONAL -->
+    <footer>
+        <p>Página web oficial desarrollada por <strong>Valentino Fernández</strong> (2.º Año) para la materia de Robótica Educativa.</p>
+        <p>Estructura de diseño, desarrollo de código extendido y optimización técnica asistida por <strong>Gemini</strong>.</p>
+        <p>Institución Educativa - Ciclo Lectivo 2026</p>
+    </footer>
+
+    <!-- SCRIPT JAVASCRIPT PARA LA INTERACTIVIDAD -->
+    <script>
+        function checkAnswer(button, isCorrect, questionId) {
+            const card = button.closest('.quiz-card');
+            const buttons = card.querySelectorAll('.option-btn');
+            const feedback = document.getElementById('feedback-' + questionId);
+
+            // Deshabilitar todos los botones de esta pregunta para evitar múltiples clics
+            buttons.forEach(btn => {
+                btn.style.pointerEvents = 'none';
+            });
+
+            if (isCorrect) {
+                button.classList.add('correct');
+                feedback.style.color = '#047857';
+                feedback.textContent = '¡Correcto! Excelente respuesta.';
+            } else {
+                button.classList.add('incorrect');
+                feedback.style.color = '#b91c1c';
+                feedback.textContent = 'Incorrecto. ¡Seguí practicando!';
+                
+                // Mostrar cuál era la correcta
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.classList.add('correct');
+                    }
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
